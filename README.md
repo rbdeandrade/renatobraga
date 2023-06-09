@@ -13,4 +13,4 @@
         </p>
     <br>
     <hr>
-        <p> site is published at https://rbdeandrade.github.io/renatobraga/ and http://renatobraga.me/ </p>
+        <p> site is published at https://rbdeandrade.github.io/renatobraga/ </p>
