@@ -14,9 +14,12 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 $to = "info@drawdesign.studio"; // Updated email address
 $subject = "Website Contact Form:  $name";
 $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: info@drawdesign.studio\n"; // Updated email address
+$header = "From: noreply@yourdomain.com\n"; // Updated email address
 $header .= "Reply-To: $email";	
 
-if(!mail($to, $subject, $body, $header))
+if(!mail($to, $subject, $body, $header)) {
   http_response_code(500);
+} else {
+  http_response_code(200);
+}
 ?>
