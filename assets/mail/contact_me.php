@@ -1,27 +1,40 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-  http_response_code(500);
-  error_log("Validation failed: empty fields or invalid email.");
-  exit();
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $message = htmlspecialchars($_POST['message']);
+    $honeypot = $_POST['honeypot']; // Honeypot field
 
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+    // Honeypot check
+    if (!empty($honeypot)) {
+        http_response_code(400);
+        echo "Spam detected.";
+        exit;
+    }
 
-// Create the email and send the message
-$to = "info@drawdesign.studio"; // Updated email address
-$subject = "Website Contact Form:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: noreply@yourdomain.com\n"; // Updated email address
-$header .= "Reply-To: $email";	
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        http_response_code(400);
+        echo "Invalid email format.";
+        exit;
+    }
 
-if(!mail($to, $subject, $body, $header)) {
-  http_response_code(500);
-  error_log("Mail function failed.");
+    $to = "info@drawdesign.studio";
+    $subject = "Website Contact Form: $name";
+    $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
+    $headers = "From: noreply@yourdomain.com\n";
+    $headers .= "Reply-To: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        http_response_code(200);
+        echo "Email sent successfully.";
+    } else {
+        http_response_code(500);
+        echo "Failed to send email.";
+    }
 } else {
-  http_response_code(200);
+    http_response_code(403);
+    echo "Forbidden";
 }
 ?>
