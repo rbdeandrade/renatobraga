@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Renato Braga de Andrade Portfolio and CV - 3D Experience.">
+    <meta name="keywords" content="curriculum vitae, cv, portfolio, resume, design, designer, ui design, ux design, three.js, webgl">
+    <title>Renato Braga de Andrade - 3D Room CV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    
+    <div id="content">
+        <div id="loading">
+            <h1>Welcome to my 3D CV Room...</h1>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <header>
+            <h1>Renato Braga de Andrade</h1>
+            <h2>Designer - Passionate to solve problems.</h2>
+            <div class="navigation">
+                <button data-section="about" class="active">About Me</button>
+                <button data-section="education">Education</button>
+                <button data-section="experience">Experience</button>
+                <button data-section="skills">Skills</button>
+                <button data-section="awards">Awards</button>
+                <button data-section="projects">Projects</button>
+            </div>
+        </header>
+        
+        <main>
+            <section id="about" class="active">
+                <div class="profile">
+                    <h3>Personal statement</h3>
+                    <p>Hello! I'm Renato, a Master in Design at UERJ/ESDI and Bachelor in Design at UniCarioca. 
+                       I also did an exchange program with a scholarship in Ireland for 1 year studying design, marketing and innovation.
+                       I am looking for an opportunity to collaborate and apply my knowledge in design, user experience, technology and innovation.
+                       Especially UI/UX Design and front-end development.</p>
+                    <p>I am currently living in Portugal. Did you like some of my work? Get in touch and I will reply as soon as possible!</p>
+                </div>
+                <div class="contacts">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i> Skype</a></li>
+                        <li><a href="https://orcid.org/0000-0002-9973-2724"><i class="fa fa-graduation-cap"></i> ORCID</a></li>
+                        <li><a href="mailto:rbdeandrade@gmail.com"><i class="fa fa-envelope-o"></i> E-mail</a></li>
+                        <li><a href="#"><i class="fa fa-desktop"></i> Website</a></li>
+                        <li><a href="https://www.linkedin.com/in/rbdeandrade/"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="education">
+                <h3>Education &amp; Certification</h3>
+                <div class="timeline">
+                    <div class="item">
+                        <div class="content">
+                            <h4>MSc in Design</h4>
+                            <p class="sub">ESDI/UERJ</p>
+                            <p>Studied all aspect of Design Including Service Design, UX/UI, Methodology, Information Design, and Interaction Design.</p>
+                        </div>
+                        <div class="year">Class of 2020</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>BSc in Design</h4>
+                            <p class="sub">UniCarioca</p>
+                            <p>Studied all aspect of Design Including Advertising Design, Branding, Ilustration, Information Design, Packaging Design and Website Design.</p>
+                        </div>
+                        <div class="year">Class of 2016</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>Postgraduate in New Media and Web Practices</h4>
+                            <p class="sub">Universidade Nova de Lisboa - FCSH</p>
+                            <p>Studied new media and web practices, focusing on the latest trends and technologies in the field.</p>
+                        </div>
+                        <div class="year">2021 - 2022</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>Science without Borders - Product Design, Marketing & Innovation</h4>
+                            <p class="sub">Maynooth University</p>
+                            <p>Studied all aspect of Design Including Advertising Design, Innovation, Marketing, Ilustration, Information Design, Packaging Design and Project Management</p>
+                        </div>
+                        <div class="year">2013-2014</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="experience">
+                <h3>Job Experiences</h3>
+                <div class="timeline">
+                    <div class="item">
+                        <div class="content">
+                            <h4>Logistic Specialist & IT Administrator</h4>
+                            <p class="sub">Paybyrd</p>
+                            <p>Managing logistics and IT operations.</p>
+                        </div>
+                        <div class="year">Jun 2024 - Current</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>Customer Service Representative</h4>
+                            <p class="sub">Teleperformance Portugal</p>
+                            <p>Identify customer problems through effective interrogation strategies. Ensure excellent customer service through quick and effective actions.</p>
+                        </div>
+                        <div class="year">Aug 2020 - May 2024</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>Designer and Web Developer</h4>
+                            <p class="sub">Freelancer</p>
+                            <p>Freelancer Designer with knowledge and experience on Figma, Adobe XD, Photoshop, Illustrator, Premiere, After Effects, InVision, Axure RP and Web developer with HTML/CSS/JavaScript.</p>
+                        </div>
+                        <div class="year">Dec 2018 - Current</div>
+                    </div>
+                    <div class="item">
+                        <div class="content">
+                            <h4>Jr. Consultant</h4>
+                            <p class="sub">MJV Technology & Innovation</p>
+                            <p>Developing innovative projects using service design, UX/UI and new technologies.</p>
+                        </div>
+                        <div class="year">Jan 2018 - Dec 2018</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills">
+                <h3>Technical Skills</h3>
+                <div class="skills-container">
+                    <div class="skill">InDesign</div>
+                    <div class="skill">Photoshop</div>
+                    <div class="skill">Illustrator</div>
+                    <div class="skill">Rhinoceros 3D</div>
+                    <div class="skill">Scrum/Lean/Agile</div>
+                    <div class="skill">HTML/CSS/Bootstrap</div>
+                    <div class="skill">JavaScript/React Native</div>
+                    <div class="skill">Figma/Invision/Axure RP</div>
+                    <div class="skill">UI/UX Design and Research</div>
+                </div>
+            </section>
+            
+            <section id="awards">
+                <h3>Awards</h3>
+                <div class="awards-container">
+                    <div class="award">
+                        <h4>EDP University Challenge 2019</h4>
+                        <p class="sub">EDP</p>
+                        <p>Augmented Reality and Virtual Reality within Service Stores.</p>
+                    </div>
+                    <div class="award">
+                        <h4>First Place - "Só Desce" MEPRO</h4>
+                        <p class="sub">UM - School of Engineering</p>
+                        <p>Construction and racing of pinewood derby cars among students of Product Engineering.</p>
+                    </div>
+                    <div class="award">
+                        <h4>Academic Merit - Golden Medal</h4>
+                        <p class="sub">UniCarioca</p>
+                        <p>Grade above 9 out of 10.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <h3>My Projects</h3>
+                <p>Interact with the plants in the 3D environment to explore my portfolio of projects.</p>
+                <p>Each plant represents a different project. Click on them to learn more!</p>
+                
+                <div class="projects-grid">
+                    <!-- Content will be populated dynamically when a project is selected -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="controls">
+                <button id="reset-camera" title="Reset view"><i class="fa fa-home"></i></button>
+                <button id="toggle-language" title="Change language"><i class="fa fa-globe"></i> <span id="lang-indicator">EN</span></button>
+                <button id="toggle-content" title="Toggle content panel"><i class="fa fa-bars"></i></button>
+            </div>
+            <p>&copy; 2024 Renato Braga de Andrade</p>
+        </footer>
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
